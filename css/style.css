@@ -8889,8 +8889,8 @@ html.tablet .ui-to-top {
 
 @media (min-width: 576px) {
 	.ui-to-top {
-		right: 40px;
-		bottom: 40px;
+		right: 15px;
+		bottom: 15px;
 	}
 }
 
@@ -14268,4 +14268,96 @@ button.wh-ap-btn::before {
     padding-left: 10px;
     padding-right: 10px;
     width:  80px;
+}
+
+
+
+
+button.fab {
+  cursor: pointer;
+  position: fixed;
+  bottom: 5rem;
+  z-index: 99;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #AFCD43;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+/*Parent Menu Container (ul)*/
+.floatingMenu {
+  pointer-events: none;
+  position: fixed;
+  overflow: hidden;
+  z-index: 98;
+  bottom: 7rem;
+  padding: 0.2em 0.4rem 2.4rem 0;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.floatingMenu.open {
+  pointer-events: inherit;
+}
+/*Menu Items (li's)*/
+.floatingMenu li {
+  opacity: 0;
+  top: 20em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  column-gap: 1em;
+  margin-bottom: 1em;
+  transition: top 0.5s ease, opacity 0.5s ease;
+}
+.floatingMenu li.visible {
+  opacity: 1;
+  top: 0;
+}
+.floatingMenu li:last-of-type {
+  margin-bottom: 0;
+}
+/*Menu Item Labels (spans)*/
+.floatingMenu li span {
+  padding: 0.4rem;
+  opacity: 0;
+  font-size: 0.7rem;
+  color: white;
+  border-radius: 3px;
+  background-color: #111111;
+  transition: opacity 0.5s ease;
+}
+.floatingMenu li:hover span {
+  opacity: 1;
+}
+/*Icons*/
+.floatingMenu li a i {
+  color: white;
+  display: block;
+  font-size: 1.375rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3rem;
+  background-color:#445878;
+  transition: transform 0.5s ease;
+}
+.floatingMenu li a:hover i {
+  transform: scale(1.06);
+}
+
+.container2 {
+  text-align: center;
+}
+
+
+.page-header{
+	padding: 0px !important;
+    margin: 0px !important;
 }
