@@ -14208,3 +14208,18 @@ button.fab {
 	padding: 0px !important;
     margin: 0px !important;
 }
+
+
+
+.tel {
+	display: none;
+}
+
+@media (max-width: 767.98px) {
+	.tel {
+		display: flex;
+	}
+	.pc {
+		display: none;
+	}
+}
